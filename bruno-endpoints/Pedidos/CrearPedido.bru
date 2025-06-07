@@ -1,0 +1,21 @@
+meta {
+  name: CrearPedido
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8085/api/pedidos
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "clienteId": 1,
+    "productosId": [
+      1,
+      9
+    ]
+  }
+}

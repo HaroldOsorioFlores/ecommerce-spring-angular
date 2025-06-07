@@ -1,0 +1,11 @@
+meta {
+  name: ObtenerTodosLosPedidos
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:8085/api/pedidos
+  body: json
+  auth: inherit
+}
