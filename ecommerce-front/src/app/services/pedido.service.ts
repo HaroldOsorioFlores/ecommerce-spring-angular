@@ -11,7 +11,7 @@ import {
   providedIn: 'root',
 })
 export class PedidosService {
-  url = 'http://localhost:8085/api/pedidos';
+  url = 'http://192.168.1.6:8085/api/pedidos';
 
   constructor(private readonly http: HttpClient) {}
 

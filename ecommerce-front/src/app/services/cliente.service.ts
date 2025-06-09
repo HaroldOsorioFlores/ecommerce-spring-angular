@@ -7,7 +7,7 @@ import { ClienteInterface } from '../interfaces/cliente.interface';
   providedIn: 'root',
 })
 export class ClienteService {
-  url = 'http://localhost:8085/api/clientes';
+  url = 'http://192.168.1.6:8085/api/clientes';
   constructor(private readonly http: HttpClient) {}
 
   getClientes(): Observable<ClienteInterface[]> {

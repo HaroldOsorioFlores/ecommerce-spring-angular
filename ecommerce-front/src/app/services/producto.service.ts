@@ -7,7 +7,7 @@ import { ProductoInterface } from '../interfaces/producto.interface';
   providedIn: 'root',
 })
 export class ProductoService {
-  url = 'http://localhost:8085/api/productos';
+  url = 'http://192.168.1.6:8085/api/productos';
   constructor(private readonly http: HttpClient) {}
 
   getProductos(): Observable<ProductoInterface[]> {
