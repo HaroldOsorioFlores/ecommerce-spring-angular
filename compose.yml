@@ -41,6 +41,17 @@ services:
       - SPRING_R2DBC_PASSWORD=admin123
       - SPRING_DATA_MONGODB_URI=mongodb://admin:admin123@mongodb:27017/ecommerce?authSource=admin
 
+  frontend:
+    build:
+      context: ./ecommerce-front
+      dockerfile: Dockerfile
+    container_name: frontend
+    depends_on:
+      - api
+    ports:
+      - "4230:80"
+    restart: unless-stopped
+
 volumes:
   postgres_data:
   mongo_data:
